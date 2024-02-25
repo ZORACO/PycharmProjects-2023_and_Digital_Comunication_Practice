@@ -1,0 +1,61 @@
+# simulates a simple inventory management system using dictionaries.
+
+inventory = {}
+
+def add_item(item_name, quantity):
+     if item_name in inventory:
+         inventory[item_name] += quantity
+     else:
+         inventory[item_name] = quantity
+
+
+def remove_item(item_name, quantity):
+     if item_name in inventory:
+         if inventory[item_name] >= quantity:
+             inventory[item_name] -= quantity
+         else:
+             print("Insufficient Quantity of ", item_name)
+     else:
+         print(item_name, "Not found in Inventory")
+
+
+def display_item():
+     print("Current Inventory contains")
+     for item, quantity in inventory.items():
+         print(item, ": ",quantity)
+
+
+ #loop for the inventory
+
+while True:
+     print("\nPlease choose from below")
+     print(" 1. Add items from the Inventory")
+     print(" 2. Remove items from the Inventory")
+     print(" 3. Display items from the Inventory")
+     print(" 4. Exit")
+     choose = input("Enter your choice: ")
+
+     if choose == '1':
+         item_name = input("Enter the name of item: ")
+         quantity = int(input("Enter the Quantity to Add: "))
+         add_item(item_name,quantity)
+         print("Item added to the inventory")
+     elif choose == '2':
+         item_name = input("Enter the name of the item: ")
+         quantity = int(input("Enter the quantity to remove: "))
+         remove_item(item_name,quantity)
+         print("Item removed from the inventory")
+     elif choose == '3':
+         display_item()
+     elif choose == '4':
+         print("Exiting Inventory")
+         break
+     else:
+         print("Kindly choose a valid option")
+
+def sus(num_1 , num_2):
+     sum = num_1 + num_2
+     print(sum)
+a = int(input("Enter the 1st number "))
+b= int(input("Enter the 2nd number "))
+sus(a,b)

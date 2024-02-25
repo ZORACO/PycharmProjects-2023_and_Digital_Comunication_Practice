@@ -1,0 +1,24 @@
+#Details of a person and sort it using a given argument
+
+people_info= {
+    "Sky": {
+        "age": 21,
+        "location":"Canada"
+    },
+    "Mun":{
+         "age": 22,
+        "location":"Germany"
+    },
+    "Fuk":{
+         "age": 20,
+        "location":"Italy"
+    }}
+print(people_info["Sky"])
+person_name = str(input("Enter the name: "))
+if person_name in people_info:
+    person_details = people_info[person_name]
+    print(f"name: {person_name}")
+    print(f"age: {person_details['age']}")
+    print(f"location: {person_details['location']}")
+else:
+    print(f"{person_name} not found in the dictionary.")

@@ -1,0 +1,15 @@
+#To print fibonacci series
+
+def GCD(n):
+    n=0
+    b=1
+    while(n<100):
+         s=n+b
+         n=b
+         b=s
+         print(n)
+
+
+inp1 = input("Enter to Start")
+GCD(inp1)
+

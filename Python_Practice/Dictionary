@@ -1,0 +1,24 @@
+#Defining Dectionary
+
+Dict= {
+    "name": "Iftari",
+    "age": 19,
+    "place": "Everywhere"
+}
+print(Dict["name"])
+print(Dict["age"])
+print(Dict["place"])
+
+#Defining List
+
+fruits = ["Apple", "Cherry", "Mango"]
+car = ["Audi", "Mustang", "Safari"]
+print(fruits)
+print(car)
+print(fruits[2] , "and", car[1])
+print(fruits[-3] , "and", car[-1])
+print(len(fruits))
+fruits.append("banana")
+car.pop()
+print(fruits)
+print(car)

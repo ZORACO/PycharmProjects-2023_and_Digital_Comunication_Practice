@@ -1,0 +1,21 @@
+#To chek if the given input is Palindrome or not (Code 1)
+
+user_input = input("Please enter what you want to check : ")
+reverse_user_input = user_input[::-1]
+if (user_input == reverse_user_input):
+    print("yes it is a Palindrome")
+else:
+    print("No it is not a plindrome")
+
+
+#To check if the given input is Palindrome or not (Code 2)
+
+def is_palindrome(input_string):
+    cleaned_string = ''.join(input_string.split()).lower()
+    return cleaned_string == cleaned_string[::-1]
+user_input = input("Enter a string: ")
+
+if is_palindrome(user_input):
+    print("The string is a palindrome.")
+else:
+     print("The string is not a palindrome.")
