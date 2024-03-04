@@ -1,4 +1,4 @@
-% PCM with mid-tread quantizer
+PCM with mid-tread quantizer
 clc; clear all; close all;
 
 fm = 2; % Message frequency
@@ -19,7 +19,7 @@ ylabel('Amplitude')
 title('Original Message Signal')
 grid on
 
-%Mid-Tread Quantization 
+Mid-Tread Quantization 
 enc = [];
 for i = 1:length(x)
     if x(i) > 0.5 && x(i) <= 1.5
@@ -65,7 +65,7 @@ ylabel('Error Amplitude')
 title('Quantization error')
 grid on
 
-% PCM Receiver
+PCM Receiver
 rec = enc; % received bits
 xq_r = [];
 for j = 1 :3:length(rec) - 2
@@ -95,7 +95,7 @@ ylabel('Amplitude')
 title('Demapped Signal')
 grid on
 
-% Low Pass Filtering
+Low Pass Filtering
 [num den] = butter(5,4*fm/fs); % Butterworth LPF filter
 rec_op = filter(num, den, xq_r); % Smoothing
 figure(5)
